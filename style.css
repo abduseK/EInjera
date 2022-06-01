@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url(images/injera.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.login-box{
+    max-width: 700px;
+    float: none;
+    margin: 150px auto;
+}
+
+.btn-primary{
+    margin-top: 10px !important;
+    background-color: orange;
+    border-color: orange;
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: violet;
+    border-color: violet;
+    color: black;
+}
+
+.sign-in{
+    color: orange;
+    text-align: center;
+}
+
+.sign-up{
+    color: orange;
+    text-align: center;
+}
+
+.login-left{
+    background: rgba(211, 211, 211, 0.5);
+    padding: 30px;
+}
+
+.login-right{
+    background: #fff;
+    padding: 30px;
+}
+
+.form-control{
+    background-color: transparent !important;
+}
+
+.float-right{
+    color: orange !important;
+    text-decoration: none;
+    font-size: 30px;
+}
+span{
+    color: #fff;
+    font-size: 40px;
+}
+
+.description-header{
+    color: orange;
+    text-align: center;
+    margin-top: 15px;
+}
+p{
+    color: rgb(216, 205, 205);
+    margin-bottom: 0;
+}
+
