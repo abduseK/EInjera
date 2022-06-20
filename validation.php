@@ -19,8 +19,12 @@ if($num == 1){
     header('location:home.php');
 }
 else{
-    header('location:login.php');
+    //header('location:login.php');
+    echo '<script type="text/javascript">
+    window.location.href = "./login.php";
+    alert("Wrong username or password");
     
+    </script>';
 }
 
 ?>

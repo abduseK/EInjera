@@ -9,7 +9,7 @@
 ?>
 
 
-
+<html>
 <head>
     <title>Home</title>
     <link rel = "stylesheet" type = "text/css" href = "homeStyle.css">
@@ -27,6 +27,17 @@
     </div>
     
     <div>
+
+    
+
+    </div>
+    <div class="container">
+        <form class = "search-bar" action="" method = "post">
+            <input type="text" placeholder = "Search Injera Delivery Here" name = 'q'>
+            <button type = "submit" name = "submit" id = "show-popup-btn"><img src="images/search.png" alt=""></button>
+        </form>
+    </div>
+
     <?php
 
 
@@ -73,14 +84,6 @@ if(isset($_POST["submit"])) {
 
 
 ?>
-
-    </div>
-    <div class="container">
-        <form class = "search-bar" action="" method = "post">
-            <input type="text" placeholder = "Search Injera Delivery Here" name = 'q'>
-            <button type = "submit" name = "submit" id = "show-popup-btn"><img src="images/search.png" alt=""></button>
-        </form>
-    </div>
 
     
     
