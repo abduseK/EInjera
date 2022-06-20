@@ -13,6 +13,8 @@
 <head>
     <title>Home</title>
     <link rel = "stylesheet" type = "text/css" href = "homeStyle.css">
+    <link rel = "stylesheet" type = "text/css" href = "poppping.css">
+    <script defer src="poping.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 </head>
 <body>
@@ -55,29 +57,42 @@ if(isset($_POST["submit"])) {
         ?>
 
         
-        <div style = "
-             background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url(images/injera.jpg);
-             background-size: cover;
-             background-position: center;
-             padding: 50px;
-
-        
-        
-        ">
-            <h2 style = "color: orange"><?php echo $row->CompName; ?></h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="modal active" id="modal">
+    <div class="modal-header">
+      <div class="title" style = "color: orange"><?php echo $row->CompName; ?></div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
             <p style = "color: grey"><?php echo $row->Description; ?></p>
             <Address style = "color: orange"><?php echo $row->Address; ?></Address>
-            <p style = "color: white"><?php echo $row->Price; ?></p>
-            <small style = "color: white"><?php echo $row->Delivery; ?></small>
-        </div>
+            <p style = "color: black"><?php echo $row->Price; ?></p>
+            <small style = "color: black"><?php echo $row->Delivery; ?></small>
+    </div>
+  </div>
+  <div id="overlay"></div>
+</body>
+</html>
         
 
         <?php
     }
     
-    // else {
-    //     echo "This company doesn't exist";
-    // }
+    else {
+        echo '<script type="text/javascript">
+        window.location.href = "home.php";
+        alert("This company hasn\'t registered with us yet");
+        
+        </script>';
+    }
 
 
 }
